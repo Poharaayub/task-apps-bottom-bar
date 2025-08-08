@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f3f4f6;
+}
+
+h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin: 1rem 0;
+}
+
+.page {
+  display: none;
+  padding: 1rem;
+}
+
+.active {
+  display: block;
+}
+
+form {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#deleteAllBtn {
+  background-color: #f44336;
+  margin-top: 1rem;
+}
+
+.task-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.task-card small {
+  color: gray;
+  display: block;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  float: right;
+  cursor: pointer;
+}
+
+.selesai-btn {
+  background: #2196F3;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.selesai {
+  background-color: #e0e0e0 !important;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background: white;
+  border-top: 1px solid #ccc;
+}
+
+nav button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.container {
+  padding-bottom: 80px;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OCS NFI Task App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Halaman Input Tugas -->
+    <div id="inputPage" class="page active">
+      <h2>📥 Input Tugas</h2>
+      <form id="taskForm">
+        <input type="text" id="nama" placeholder="Nama Pekerjaan" required />
+        <input type="text" id="area" placeholder="Area" required />
+        <input type="text" id="tipe" placeholder="Tipe Pekerjaan" required />
+        <select id="shift" required>
+          <option value="" disabled selected>Pilih Shift</option>
+          <option value="Pagi">Pagi</option>
+          <option value="Siang">Siang</option>
+          <option value="Sore">Sore</option>
+          <option value="Malam">Malam</option>
+        </select>
+        <input type="date" id="tanggal" required />
+        <input type="time" id="jamMulai" required />
+        <input type="time" id="jamSelesai" required />
+        <input type="date" id="due" required />
+
+        <select id="pembuat" required>
+          <option value="" disabled selected>Pilih Pembuat Tugas</option>
+          <option value="Pohara Ayub">Pohara Ayub</option>
+          <option value="Sadulloh">Sadulloh</option>
+        </select>
+
+        <select id="penerima" required>
+          <option value="" disabled selected>Pilih Penerima Tugas</option>
+          <option value="Edi Ahmad Jubaedi">Edi Ahmad Jubaedi</option>
+          <option value="Saiful Bahri">Saiful Bahri</option>
+          <option value="Wahidin">Wahidin</option>
+          <option value="Amrullah">Amrullah</option>
+          <option value="Ade Surahman">Ade Surahman</option>
+          <option value="Siti Maemunah">Siti Maemunah</option>
+          <option value="Sulaiman">Sulaiman</option>
+          <option value="Muhammad Toni">Muhammad Toni</option>
+          <option value="M. Rifai">M. Rifai</option>
+        </select>
+
+        <button type="submit">Tambah Tugas</button>
+      </form>
+    </div>
+
+    <!-- Halaman Daftar Tugas -->
+    <div id="listPage" class="page">
+      <h2>📋 Daftar Tugas</h2>
+      <div id="taskList"></div>
+      <button id="deleteAllBtn">🗑️ Hapus Semua Tugas</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <nav>
+    <button onclick="showPage('inputPage')" id="btnInput" class="active">➕ Input</button>
+    <button onclick="showPage('listPage')" id="btnList">📋 Tugas</button>
+  </nav>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
